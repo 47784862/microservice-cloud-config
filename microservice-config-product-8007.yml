@@ -35,12 +35,7 @@ eureka:
   instance:
     instanceId: ${spring.application.name}:${server.port}-hystrix # 指定实例ID,就不会显示主机名了,等价于microservice-product:8001
     prefer-ip-address: true #访问路径就会显示成IP地址
-# 在被监控服务上添加暴露端点
-management:
-  endpoints:
-    web:
-      exposure:
-        include: hystrix.stream
+
 
 ---
 server:
@@ -74,12 +69,7 @@ eureka:
   instance:
     instanceId: ${spring.application.name}:${server.port}
     prefer-ip-address: true 
-# 在被监控服务上添加暴露端点
-management:
-  endpoints:
-    web:
-      exposure:
-        include: hystrix.stream
+
 
 
 
