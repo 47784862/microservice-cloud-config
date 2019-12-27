@@ -66,11 +66,5 @@ eureka:
   instance:
     instanceId: ${spring.application.name}:${server.port}
     prefer-ip-address: true 
-## 在被监控服务上添加暴露端点
-management:
- endpoints:
-   web:
-     exposure:
-       include: hystrix.stream
 emp:
   name: wangwu
